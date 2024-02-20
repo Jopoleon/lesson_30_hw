@@ -10,7 +10,10 @@
 
 В этом задании задача будет сделать это с помощью скрипта. Другие площадки и пайплайны посмотрим в других уроках и в других домашках. 
 
-Сервис, который необходимо развернуть - ваше домашнее задание с бекендом для блога.
+Сервис, который необходимо развернуть - ваше домашнее задание с бекендом для блога. 
+
+Результат домашнего задания - код сервера в этом репозитории, 
+плюс все ваши конфиги сервиса на линукс, скрипт для деплоя и описание того, как этот деплой производить в readme файле
 
 ---------
 
@@ -55,6 +58,7 @@ WantedBy=multi-user.target
 
 Для всего этого скрипта нам понадобиться системная тулза 
 Линукс `systemctl` которая позволяет менеджить сервисы линукс.
+
 ----
 To manage the state of the service you should use the `systemctl` linux tool.
 
@@ -63,6 +67,7 @@ The commands you will usually need:
 - `systemctl restart myservice.service`- restart the service
 - `systemctl stop myservice.service` - stop the service
 ---
+
 Пример скрипта:
 ```shell
 env GOOS=linux GOARCH=amd64 go build -o myBinary
